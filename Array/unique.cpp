@@ -1,22 +1,15 @@
 #include <iostream>
 using namespace std;
 
-void unique(int arr[], int size)
+int unique(int arr[], int size)
 {
-    int unique_index = 0;
+    int unique = 0;
 
     for(int i = 0; i < size; i++)
     {
-        if(arr[i] == arr[unique_index])
-        {
-            unique_index += 1;
-            continue;
-        }
-        else
-        {
-            
-        }
+        unique = unique ^ arr[i];
     }
+    return unique;
 }
 
 int main()
@@ -35,6 +28,10 @@ int main()
         cout << "Element " << i + 1 << ": ";
         cin >> arr[i];
     }
+
+    int result = unique(arr, n);
+
+    cout << "Unique element is :" << result;
 
     return 0;
 }
