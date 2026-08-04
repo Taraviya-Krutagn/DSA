@@ -11,13 +11,11 @@ int main()
 
     for (int i = 0; i < n; i++) {
 
-        // Print leading spaces
         for (int j = 0; j < n - i - 1; j++)
             cout << " ";
 
         int num = 1;
 
-        // Print elements of the current row
         for (int j = 0; j <= i; j++) {
             cout << num << " ";
             num = num * (i - j) / (j + 1);
