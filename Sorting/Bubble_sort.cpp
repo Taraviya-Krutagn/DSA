@@ -5,6 +5,7 @@ void bubbleSort(int arr[], int n)
 {
     bool swapped = false;
 
+    // Performing Bubble Sort
     for(int i = 1; i < n; i++)
     {
         for(int j = 0; j < n-i; j++)
